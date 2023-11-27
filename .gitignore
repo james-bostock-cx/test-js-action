@@ -42,8 +42,7 @@ bower_components
 build/Release
 
 # Dependency directories
-# As this is a GitHub action, we don't want to ignore the node_modules directory
-#node_modules/
+node_modules/
 jspm_packages/
 
 # Snowpack dependency directory (https://snowpack.dev/)
@@ -93,7 +92,9 @@ out
 
 # Nuxt.js build / generate output
 .nuxt
-dist
+# @vercel/ncc, used to create a single index.js file, writes its output
+# to the dist directory
+#dist
 
 # Gatsby files
 .cache/
